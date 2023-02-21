@@ -185,7 +185,7 @@ func TestParseTorrentInfo_Size(t *testing.T) {
 
 func TestQueryWithImdbRequest(t *testing.T) {
 	got := MakeRequestQuery(Request{ImdbId: 2})
-	want := got == "imdb_id=2"
+	want := got == "?imdb_id=2"
 	if !want {
 		t.Errorf("got %v instead", got)
 	}
